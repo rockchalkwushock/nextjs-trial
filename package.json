@@ -8,6 +8,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
+    "export": "yarn build && next export",
     "start": "next start",
     "type-check": "tsc"
   },
