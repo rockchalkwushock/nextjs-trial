@@ -8,12 +8,12 @@ const { publicRuntimeConfig } = getConfig()
 const { GRAPHQL_ENDPOINT } = publicRuntimeConfig
 
 // Create HOC withApollo for injecting GraphQL data to pages.
-export default withApollo(
-  ({ ctx, headers }) =>
-    new ApolloClient({
-      uri: GRAPHQL_ENDPOINT,
-      headers: {
-        Authorization: `Bearer ${getToken()}`
-      }
-    })
-)
+export default withApollo(({ ctx, headers }) => {
+  return new ApolloClient({
+    uri: GRAPHQL_ENDPOINT,
+    headers: {
+      ...headers,
+      Authorization: `Bearer ${getToken()}`
+    }
+  })
+})

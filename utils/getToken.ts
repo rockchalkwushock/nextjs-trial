@@ -1,2 +1,2 @@
 export const getToken = (): string | null =>
-  localStorage.getItem('access_token')
+  process.browser ? localStorage.getItem('access_token') : null
