@@ -1,3 +1,8 @@
-import { Hello } from '../components'
+import { Hello, MeetingList } from '../components'
 
-export default () => <Hello framework="NextJS" />
+export default () => (
+  <div>
+    <Hello framework="NextJS" />
+    <MeetingList />
+  </div>
+)
