@@ -1,0 +1,18 @@
+{
+  "name": "nextjs-trial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rockchalkwushock/nextjs-trial.git",
+  "author": "Cody Brunner <rockchalkwushock@icloud.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
+}
