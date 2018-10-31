@@ -7,7 +7,10 @@ const copyFile = promisify(fs.copyFile)
 // Modules
 const withTypescript = require('@zeit/next-typescript')
 
-require('dotenv-safe').load()
+// Only use in development!
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv-safe').load()
+}
 
 module.exports = withTypescript({
   publicRuntimeConfig: {
