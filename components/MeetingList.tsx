@@ -4,7 +4,7 @@ import { Query } from 'react-apollo'
 
 const MEETINGS_QUERY = gql`
   query MEETINGS_QUERY {
-    getMeetings {
+    meetings: getMeetings {
       edges {
         node {
           name
