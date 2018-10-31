@@ -2,7 +2,9 @@
 
 exports[`<Hello /> should render to DOM 1`] = `
 <DocumentFragment>
-  <h1>
+  <h1
+    class="Hello__Title-dz5c7s-0 kCTxqR"
+  >
     Hello from NextJS!
   </h1>
 </DocumentFragment>
