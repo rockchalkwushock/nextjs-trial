@@ -1,0 +1,10 @@
+[[redirects]]
+# Redirect for '/auth' protocol
+from = '/auth'
+to = '/auth.html'
+status = 200
+[[redirects]]
+# Redirect for running SPA.
+from = '/*'
+to = '/index.html'
+status = 200
