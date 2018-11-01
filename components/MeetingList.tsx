@@ -2,7 +2,7 @@ import * as React from 'react'
 import { gql } from 'apollo-boost'
 import { Query } from 'react-apollo'
 
-const MEETINGS_QUERY = gql`
+export const MEETINGS_QUERY = gql`
   query MEETINGS_QUERY {
     meetings: getMeetings {
       edges {
@@ -20,9 +20,13 @@ export const MeetingList: React.SFC = () => (
     {({ data, error, loading }) => {
       if (error) return <p>Error: {error.message}</p>
       if (loading) return <p>Loading...</p>
-      return data.meetings.edges.map(({ node }) => (
-        <li key={node.id}>{node.name}</li>
-      ))
+      return (
+        <ul>
+          {data.meetings.edges.map(({ node }) => (
+            <li key={node.id}>{node.name}</li>
+          ))}
+        </ul>
+      )
     }}
   </Query>
 )
