@@ -6,6 +6,7 @@
   "author": "Cody Brunner <rockchalkwushock@icloud.com>",
   "license": "MIT",
   "scripts": {
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build",
     "build": "yarn clean && next build",
     "clean": "rm -rf .next out",
     "dev": "next",
@@ -40,6 +41,7 @@
     "@types/react-dom": "^16.0.9",
     "@types/react-portal": "^4.0.1",
     "@types/styled-components": "^4.0.3",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-plugin-styled-components": "^1.8.0",
@@ -47,7 +49,8 @@
     "jest": "^23.6.0",
     "jest-dom": "^2.1.0",
     "react-testing-library": "^5.2.3",
-    "typescript": "^3.1.4"
+    "typescript": "^3.1.4",
+    "webpack": "^4.23.1"
   },
   "jest": {
     "bail": true,
