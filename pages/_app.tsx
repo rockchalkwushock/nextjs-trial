@@ -9,11 +9,8 @@ import { messages } from '../lang'
 import withApollo from '../lib/withApollo'
 import { getLocale } from '../utils'
 
-addLocaleData([en, ru])
+addLocaleData([...en, ...ru])
 const locale = getLocale()
-
-console.log(locale)
-console.log(Intl.DateTimeFormat().resolvedOptions().locale)
 class MyApp extends App {
   render() {
     const { Component, apollo } = this.props
