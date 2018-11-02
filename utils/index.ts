@@ -1,3 +1,4 @@
+import { getLocale } from './getLocale'
 import { getToken } from './getToken'
 
-export { getToken }
+export { getLocale, getToken }
